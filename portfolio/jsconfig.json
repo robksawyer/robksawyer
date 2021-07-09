@@ -1,6 +1,11 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src"
+    "baseUrl": "./src",
+    "paths": {
+      "@/components/*": ["components/*"],
+      "@/styles/*": ["styles/*"],
+      "@/layouts/*": ["layouts/*"]
+    }
   },
   "exclude": ["node_modules", "build"]
 }

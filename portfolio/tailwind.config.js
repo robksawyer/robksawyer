@@ -1,15 +1,8 @@
-const {
-  colors,
-  scale,
-  fontSize,
-  spacing,
-  width,
-  height,
-  minHeight,
-  minWidth,
-  maxHeight,
-  maxWidth,
-} = require("tailwindcss/defaultTheme");
+/**
+ * @file tailwind.config.js
+ * Theme colors: https://coolors.co/011627-fdfffc-2ec4b6-e71d36-ff9f1c
+ */
+const { colors, fontSize } = require("tailwindcss/defaultTheme");
 
 module.exports = {
   purge: {
@@ -45,10 +38,9 @@ module.exports = {
       colors: {
         primary: "#000000",
         secondary: "#ffffff",
-        // https://coolors.co/011627-fdfffc-2ec4b6-e71d36-ff9f1c
-        accent0: "#2EE884",
-        accent1: "#F59B23",
-        accent2: "#FC65A2",
+        accent0: "#8C7D1B",
+        accent1: "#622A2F",
+        accent2: "#2F2334",
         accent3: "#FFFFFF",
         accent4: "#191414",
         transparent: "transparent",
@@ -71,19 +63,45 @@ module.exports = {
         "4xs": "0.5rem",
       },
       fontFamily: {
-        sans: ["CircularBook", "Helvetica", "Arial", "sans-serif"],
-        circular: [
-          "Circular",
-          "-apple-system",
-          "BlinkMacSystemFont",
-          '"Segoe UI"',
-          "Roboto",
-          '"Helvetica Neue"',
-          "Arial",
-          '"Noto Sans"',
+        sans: ["'rig-solid-bold-inline'", "Helvetica", "Arial", "sans-serif"],
+        "rig-solid-bold-fill": ["'rig-solid-bold-fill'", "sans-serif"],
+        "rig-solid-bold-inline": ["'rig-solid-bold-inline'", "sans-serif"],
+        "rig-solid-bold-halftone": ["'rig-solid-bold-halftone'", "sans-serif"],
+        "rig-solid-bold-inline-solo": [
+          "'rig-solid-bold-inline-solo'",
           "sans-serif",
         ],
+        "rig-solid-bold-outline": ["'rig-solid-bold-outline'", "sans-serif"],
+        "rig-solid-bold-reverse": ["'rig-solid-bold-reverse'", "sans-serif"],
+        "rig-solid-light-fill": ["'rig-solid-light-fill'", "sans-serif"],
+        "rig-solid-light-halftone": [
+          "'rig-solid-light-halftone'",
+          "sans-serif",
+        ],
+        "rig-solid-medium-fill": ["'rig-solid-medium-fill'", "sans-serif"],
+        "rig-solid-medium-halftone": [
+          "'rig-solid-medium-halftone'",
+          "sans-serif",
+        ],
+        "rig-solid-medium-lines": ["'rig-solid-medium-lines'", "sans-serif"],
+        "rig-solid-medium-outline": [
+          "'rig-solid-medium-outline'",
+          "sans-serif",
+        ],
+        "rig-solid-zero-halftone": ["'rig-solid-zero-halftone'", "sans-serif"],
       },
+    },
+  },
+  variants: {
+    extend: {
+      fontFamily: [
+        "active",
+        "responsive",
+        "focus",
+        "focus-within",
+        "dark",
+        "hover",
+      ],
     },
   },
   plugins: [require("@tailwindcss/aspect-ratio")],
