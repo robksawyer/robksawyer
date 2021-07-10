@@ -12,6 +12,7 @@ const Toggle = (props) => {
     className = "",
     variant = "default",
     children = "",
+    on = false,
   } = props;
 
   const toggle = () => {
@@ -41,22 +42,32 @@ const Toggle = (props) => {
         id="id1"
         className="cursor-pointer"
         onClick={toggle}
-        style={{
-          display: "none",
-        }}
+        style={
+          on
+            ? {
+                display: "none",
+              }
+            : {}
+        }
       >
         <div className="w-16 h-8 rounded-full flex items-center justify-items-start my-1 bg-gray-300">
           <div className="absolute w-6 h-6 ml-1 rounded-full bg-white"></div>
         </div>
       </div>
 
-      <div id="id2" className="cursor-pointer" onClick={toggle}>
-        <div
-          className="w-16 h-8 rounded-full flex items-center my-1"
-          style={{
-            backgroundColor: "rgba(29, 78, 216)",
-          }}
-        >
+      <div
+        id="id2"
+        className="cursor-pointer"
+        onClick={toggle}
+        style={
+          !on
+            ? {
+                display: "none",
+              }
+            : {}
+        }
+      >
+        <div className="w-16 h-8 rounded-full flex items-center my-1 bg-black">
           <div className="w-6 h-6 ml-auto mr-1 rounded-full bg-white"></div>
         </div>
       </div>
