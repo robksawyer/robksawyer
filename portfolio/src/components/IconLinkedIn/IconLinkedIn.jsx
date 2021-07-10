@@ -9,7 +9,7 @@ import styles from "./IconLinkedIn.module.css";
 const IconLinkedIn = (props) => {
   const {
     tagName: Tag = "div",
-    className = "transform scale-125 translate-x-6 pt-0",
+    className = "pt-0 w-1/4 lg:w-1/2",
     variant = "default",
     children = "",
   } = props;
@@ -26,8 +26,8 @@ const IconLinkedIn = (props) => {
         data-supported-dps="56x14"
         fill="currentColor"
         className="mercado-match text-linkedin transition-color ease-in-out duration-500 hover:text-white"
-        width="56"
-        height="14"
+        width="100%"
+        height="100%"
         focusable="false"
       >
         <g>

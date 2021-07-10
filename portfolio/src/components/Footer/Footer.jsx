@@ -27,7 +27,7 @@ const Footer = (props) => {
           That&apos;s all folks!
         </h1>
       </div>
-      <div className="grid grid-cols-4 space-x-12 font-sans">
+      <div className="grid grid-cols-1 lg:grid-cols-4 space-y-12 lg:space-y-0 lg:space-x-12 font-sans">
         <div>
           <p className="uppercase tracking-widest pb-8 text-xl">New Business</p>
           <p className="pb-2">Email Me</p>
@@ -57,7 +57,7 @@ const Footer = (props) => {
           <p className="pb-2">Google Cloud Platform</p>
         </div>
       </div>
-      <div className="grid grid-cols-2 space-x-12 font-sans py-24">
+      <div className="grid grid-cols-1 lg:grid-cols-2 space-y-12 lg:space-y-0 lg:space-x-12 font-sans py-24">
         <div>
           <p className="uppercase tracking-widest pb-8 text-xl">
             Current Location
