@@ -63,7 +63,7 @@ module.exports = {
         "4xs": "0.5rem",
       },
       fontFamily: {
-        sans: ["'rig-solid-bold-inline'", "Helvetica", "Arial", "sans-serif"],
+        sans: ["Helvetica", "Arial", "sans-serif"],
         "rig-solid-bold-fill": ["'rig-solid-bold-fill'", "sans-serif"],
         "rig-solid-bold-inline": ["'rig-solid-bold-inline'", "sans-serif"],
         "rig-solid-bold-halftone": ["'rig-solid-bold-halftone'", "sans-serif"],
