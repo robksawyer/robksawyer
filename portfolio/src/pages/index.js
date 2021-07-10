@@ -4,6 +4,9 @@ import styles from "../styles/Home.module.scss";
 import { motion } from "framer-motion";
 import { easeCubicInOut } from "d3-ease";
 
+// import HamburgerMenu from "@/components/HamburgerMenu";
+import Footer from "@/components/Footer";
+
 export default function Home() {
   const ease = easeCubicInOut;
   return (
@@ -16,7 +19,21 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <nav className="flex bg-white text-black">
+        <motion.h1
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{ delay: 1.25, ease, duration: 0.75 }}
+          className="cursor-pointer font-normal text-6xl font-rig-solid-bold-outline hover:font-rig-solid-bold-halftone pl-24 py-12"
+        >
+          ROB SAWYER
+        </motion.h1>
+        {/* <HamburgerMenu /> */}
+      </nav>
       <div className="flex-col flex justify-center align-center items-center h-screen">
         <motion.main
           initial={{
@@ -26,118 +43,39 @@ export default function Home() {
             height: "auto",
           }}
           transition={{ delay: 0.25, ease, duration: 0.75 }}
-          className="text-accent0 flex justify-center flex-col w-auto text-center bg-accent1 border-8 border-accent2"
-          style={{
-            padding: "2rem 6rem 2rem 6rem",
-          }}
-        >
-          <motion.h1
-            initial={{
-              opacity: 0,
-            }}
-            animate={{
-              opacity: 1,
-            }}
-            transition={{ delay: 1.25, ease, duration: 0.75 }}
-            className="cursor-pointer font-normal text-9xl font-rig-solid-bold-outline hover:font-rig-solid-bold-halftone"
-          >
-            FOMOLOL
-          </motion.h1>
-
-          <motion.p
-            initial={{
-              opacity: 0,
-              y: -10,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
-            transition={{ delay: 1.75, ease, duration: 0.75 }}
-            className="text-5xl font-rig-solid-bold-inline-solo"
-          >
-            Fan s#*% coming soon.
-          </motion.p>
-        </motion.main>
+          className="text-white flex justify-center flex-col w-auto text-center"
+        ></motion.main>
+      </div>
+      <div className="bg-white py-32">
+        <div className="grid grid-cols-2">
+          <p className="pl-24 text-4xl pr-24 font-rig-solid-medium-halftone hover:font-rig-solid-medium-outline">
+            I&apos;m crazy, don&apos;t hire me. I repeat, hire me please!
+          </p>
+          <p className="pr-24 text-2xl">
+            I feel very blessed everyday to be apart of such a thriving
+            industry. It&apos;s always humbling and making me mental.
+            <a href="!#" title="Read More" className="font-bold">
+              Read More
+            </a>
+          </p>
+        </div>
       </div>
 
-      <footer className="relative p-24 bottom-0 w-full flex-none bg-black h-auto font-rig-solid-bold-inline-solo text-white">
-        <div className="pb-24">
-          <h1 className="text-6xl font-rig-solid-medium-halftone hover:font-rig-solid-medium-lines cursor-pointer text-pink-400">
-            FOMOLOL Global
-          </h1>
-        </div>
-        <div className="grid grid-cols-4 space-x-12 font-sans">
-          <div>
-            <p className="uppercase tracking-widest pb-8 text-xl">
-              New Business
-            </p>
-            <p className="pb-2">Daene Lee</p>
-            <a href="mailto:daene@fomolol.com">daene@fomolol.com</a>
-          </div>
-          <div>
-            <p className="uppercase tracking-widest pb-8 text-xl">
-              Public Relations
-            </p>
-            <p className="pb-2">Not Available</p>
-            {/* <a src="mailto:daene@fomolol.com">daene@fomolol.com</a> */}
-          </div>
-          <div>
-            <p className="uppercase tracking-widest pb-8 text-xl">
-              Media Sales
-            </p>
-            <p className="pb-2">Not Available</p>
-            {/* <a src="mailto:daene@fomolol.com">daene@fomolol.com</a> */}
-          </div>
-          <div>
-            <p className="uppercase tracking-widest pb-8 text-xl">Production</p>
-            <p className="pb-2">Not Available</p>
-            {/* <a src="mailto:daene@fomolol.com">daene@fomolol.com</a> */}
-          </div>
-        </div>
-        <div className="grid grid-cols-4 space-x-12 font-sans py-24">
-          <div>
-            <p className="uppercase tracking-widest pb-8 text-xl">Careers</p>
-            <p className="pb-2">Full house ATM</p>
-            {/* <a src="mailto:daene@fomolol.com">daene@fomolol.com</a> */}
-          </div>
-          <div>
-            <p className="uppercase tracking-widest pb-8 text-xl">
-              Our Address
-            </p>
-            <p className="pb-2">123 Tech St.</p>
-            <p className="pb-2">Los Angeles, CA 90066</p>
-            <a
-              href=""
-              target="_blank"
-              className="text-sm"
-              rel="noopener noreferrer"
-            >
-              View on map
-            </a>
-          </div>
-        </div>
-        <div className="flex space-x-12 w-full text-xl font-sans">
-          <div className="space-x-12">
-            <span>&copy;2021 FOMOLOL Global</span> — All Rights Reserved
-            <a href="" title="Privacy">
-              Privacy
-            </a>
-            <a href="" title="Terms">
-              Terms
-            </a>
-          </div>
-
-          <div className="absolute text-white right-24">
-            <Image
-              src="/vercel.svg"
-              alt="FOMOLOL Logo"
-              width={72}
-              height={16}
-            />
-          </div>
-        </div>
-      </footer>
+      <Footer />
+      <motion.div
+        initial={{
+          scaleX: 1,
+          transformOrigin: "top right",
+        }}
+        animate={{
+          scaleX: 0,
+          transitionEnd: {
+            display: "none",
+          },
+        }}
+        transition={{ ease, duration: 1 }}
+        className="fixed h-screen w-screen bg-white top-0 left-0"
+      ></motion.div>
     </div>
   );
 }

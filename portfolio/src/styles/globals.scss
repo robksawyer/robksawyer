@@ -2,9 +2,10 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-image: url('/img/jpg/Gucci-Block-wallpaper.jpg');
-  background-size: 15% 15%;
+  background-image: url('/img/jpg/Gucci-Grotesque-wallpaper.jpg');
+  background-size: 147px 222px;
   background-position: 0px 0px;
+  // background-attachment: fixed;
 }
 
 a {
@@ -14,4 +15,14 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.bg-gucci0 {
+  background-image: url('/img/jpg/Gucci-Block-wallpaper.jpg');
+  background-size: 25% 100%;
+}
+.bg-gucci1 {
+  background-image: url('/img/jpg/Gucci-Grotesque-wallpaper.jpg');
+  background-size: 147px 222px;
+  background-position: 0px 0px;
 }

@@ -41,9 +41,9 @@ module.exports = {
         accent0: "#8C7D1B",
         accent1: "#622A2F",
         accent2: "#2F2334",
-        accent3: "#FFFFFF",
+        accent3: "#f40",
         accent4: "#191414",
-        transparent: "transparent",
+        linkedin: "#0a66c2",
         black: "#000",
         white: "#fff",
         gray: {
