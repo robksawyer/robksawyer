@@ -1,15 +1,30 @@
+import * as React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 import { motion } from "framer-motion";
 import { easeCubicInOut } from "d3-ease";
+import gsap from "gsap";
 
 // import HamburgerMenu from "@/components/HamburgerMenu";
+import MainScene from "@/components/MainScene";
 import Footer from "@/components/Footer";
 import Toggle from "@/components/Toggle";
 
 export default function Home() {
   const ease = easeCubicInOut;
+  const duration = 0.75;
+
+  React.useEffect(() => {
+    var tl = gsap.timeline({ repeat: 0 });
+    tl.to("#first", { ease, opacity: 1, duration });
+    tl.to("#first", { ease, opacity: 0, duration });
+    tl.to("#second", { ease, opacity: 1, duration });
+    tl.to("#second", { ease, opacity: 0, duration });
+    tl.to("#third", { ease, opacity: 1, duration });
+    tl.to("#third", { ease, opacity: 0, duration });
+  }, []);
+
   return (
     <div className="bg-transparent">
       <Head>
@@ -28,18 +43,27 @@ export default function Home() {
           animate={{
             opacity: 1,
           }}
-          transition={{ delay: 1.25, ease, duration: 0.75 }}
+          transition={{ delay: 10, ease, duration: 0.75 }}
           className="cursor-pointer font-normal text-6xl font-rig-solid-bold-outline hover:font-rig-solid-bold-halftone pl-24 py-12"
         >
           ROB SAWYER
         </motion.h1>
         {/* <HamburgerMenu /> */}
-        <div className="absolute right-24">
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{ delay: 10, ease, duration: 0.75 }}
+          className="absolute right-24"
+        >
           <Toggle />
-        </div>
+        </motion.div>
       </nav>
       <div className="flex-col flex justify-center align-center items-center h-screen">
-        <motion.main
+        {/* <motion.main
           initial={{
             height: "0px",
           }}
@@ -47,8 +71,22 @@ export default function Home() {
             height: "auto",
           }}
           transition={{ delay: 0.25, ease, duration: 0.75 }}
-          className="text-white flex justify-center flex-col w-auto text-center"
-        ></motion.main>
+          className="text-black font-rig-solid-bold-halftone text-9xl flex justify-center items-center w-auto text-center -mt-48"
+        >
+          <div id="first" className="absolute opacity-0">
+            Hi!
+          </div>
+          <div id="second" className="absolute opacity-0">
+            I'm Rob!
+          </div>
+          <div id="third" className="absolute opacity-0">
+            Third
+          </div>
+          <div id="fourth" className="absolute opacity-0">
+            Fourth
+          </div>
+        </motion.main> */}
+        <MainScene />
       </div>
       <div className="bg-accent3 py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2">
