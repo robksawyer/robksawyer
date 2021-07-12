@@ -91,11 +91,12 @@ export default function Home() {
       <div className="bg-accent3 py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <p className="pl-24 text-4xl pr-24 font-rig-solid-bold-reverse hover:font-rig-solid-bold-halftone">
-            I&apos;m crazy, don&apos;t hire me. I repeat, hire me please!
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
           <p className="pl-24 lg:pl-0 pr-24 pt-12 lg:pt-0 text-2xl">
-            I feel very blessed everyday to be apart of such a thriving
-            industry. It&apos;s always humbling and making me mental.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            tempor suscipit tortor non dapibus. Class aptent taciti sociosqu ad
+            litora torquent per conubia nostra, per inceptos himenaeos.
             <a href="!#" title="Read More" className="font-bold">
               Read More
             </a>
@@ -105,11 +106,12 @@ export default function Home() {
       <div className="bg-white py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <p className="pl-24 text-4xl pr-24 font-rig-solid-medium-halftone hover:font-rig-solid-medium-outline">
-            I&apos;m crazy, don&apos;t hire me. I repeat, hire me please!
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
           <p className="pl-24 lg:pl-0 pt-12 lg:pt-0 pr-24 text-2xl">
-            I feel very blessed everyday to be apart of such a thriving
-            industry. It&apos;s always humbling and making me mental.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            tempor suscipit tortor non dapibus. Class aptent taciti sociosqu ad
+            litora torquent per conubia nostra, per inceptos himenaeos.
             <a href="!#" title="Read More" className="font-bold">
               Read More
             </a>
