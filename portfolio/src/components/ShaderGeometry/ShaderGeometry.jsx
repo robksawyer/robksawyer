@@ -31,7 +31,7 @@ const ShaderGeometry = (props) => {
   });
 
   return (
-    <mesh ref={mesh} position={[0, 3, 0]} castShadow>
+    <mesh ref={mesh} scale={[5, 5, 5]} position={[0, 0, 0]} castShadow>
       <boxGeometry />
       <noiseMaterial />
     </mesh>

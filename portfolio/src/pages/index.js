@@ -63,31 +63,31 @@ export default function Home() {
         </motion.div>
       </nav>
       <div className="h-full">
-        {/* <motion.main
-          initial={{
-            height: "0px",
-          }}
-          animate={{
-            height: "auto",
-          }}
-          transition={{ delay: 0.25, ease, duration: 0.75 }}
-          className="text-black font-rig-solid-bold-halftone text-9xl flex justify-center items-center w-auto text-center -mt-48"
-        >
-          <div id="first" className="absolute opacity-0">
-            Hi!
-          </div>
-          <div id="second" className="absolute opacity-0">
-            I'm Rob!
-          </div>
-          <div id="third" className="absolute opacity-0">
-            Third
-          </div>
-          <div id="fourth" className="absolute opacity-0">
-            Fourth
-          </div>
-        </motion.main> */}
         <MainScene />
       </div>
+      {/* <motion.main
+        initial={{
+          height: "0px",
+        }}
+        animate={{
+          height: "auto",
+        }}
+        transition={{ delay: 0.25, ease, duration: 0.75 }}
+        className="absolute text-black font-rig-solid-bold-halftone text-9xl flex justify-center align-center items-center w-screen h-screen text-center inset-0"
+      >
+        <div id="first" className="absolute opacity-0">
+          Hi!
+        </div>
+        <div id="second" className="absolute opacity-0">
+          I'm Rob!
+        </div>
+        <div id="third" className="absolute opacity-0">
+          Third
+        </div>
+        <div id="fourth" className="absolute opacity-0">
+          Fourth
+        </div>
+      </motion.main> */}
       <div className="bg-accent3 py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <p className="pl-24 text-4xl pr-24 font-rig-solid-bold-reverse hover:font-rig-solid-bold-halftone">
