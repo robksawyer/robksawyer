@@ -62,7 +62,7 @@ export default function Home() {
           <Toggle />
         </motion.div>
       </nav>
-      <div className="flex-col flex justify-center align-center items-center h-screen">
+      <div className="h-full">
         {/* <motion.main
           initial={{
             height: "0px",

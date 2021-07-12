@@ -5,7 +5,9 @@
  * Usage:
  *
  *    import { extend } from 'react-three-fiber
- *    import { defaultShaderMaterial } from './shaders/defaultShaderMaterial'
+ *    import { DefaultShaderMaterial } from './shaders/colorShift'
+ *
+ *    extend({ DefaultShaderMaterial })
  *
  *    ... later in the React component
  *    <mesh>
@@ -15,7 +17,6 @@
  *
  */
 import * as THREE from "three";
-import { extend } from "@react-three/fiber";
 import { shaderMaterial } from "@react-three/drei";
 
 import vertex from "./vertex.glsl";
@@ -52,5 +53,3 @@ export const DefaultShaderMaterial = shaderMaterial(
     // }
   }
 );
-
-extend({ DefaultShaderMaterial });

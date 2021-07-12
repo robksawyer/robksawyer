@@ -21,6 +21,7 @@
     "chroma-js": "^2.1.2",
     "d3-ease": "^2.0.0",
     "framer-motion": "^4.1.17",
+    "glsl-noise": "^0.0.0",
     "glslify": "^7.1.1",
     "gsap": "^3.7.0",
     "leva": "^0.9.13",

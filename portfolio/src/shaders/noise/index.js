@@ -5,17 +5,18 @@
  * Usage:
  *
  *    import { extend } from 'react-three-fiber
- *    import { NoiseMaterial } from './shaders/NoiseMaterial'
+ *    import { ColorShiftMaterial } from './shaders/colorShift'
+ *
+ *    extend({ ColorShiftMaterial })
  *
  *    ... later in the React component
  *    <mesh>
  *      ...
- *      <NoiseMaterial time={0} ... />
+ *      <colorShiftMaterial time={0} ... />
  *    </mesh>
  *
  */
 import * as THREE from "three";
-import { extend } from "@react-three/fiber";
 import { shaderMaterial } from "@react-three/drei";
 
 import vertex from "./vertex.glsl";
@@ -25,12 +26,12 @@ import fragment from "./fragment.glsl";
  * NoiseMaterial
  * @param {*} uniforms
  */
-const NoiseMaterial = shaderMaterial(
+export const NoiseMaterial = shaderMaterial(
   {
-    iTime: 0.0,
-    iResolution: new THREE.Vector2(),
-    iMouse: new THREE.Vector2(0.0, 0.0),
-    texture1: null,
+    time: 0.0,
+    multiplier: 0.05,
+    resolution: new THREE.Vector2(),
+    color: new THREE.Color(0, 0, 0),
   },
   // vertex shader
   vertex,
@@ -43,7 +44,6 @@ const NoiseMaterial = shaderMaterial(
     // material.wireframe = true
     // material.vertexColors = true
     // material.flatShading = true
-
     // material.defines = {
     //   '#extension GL_OES_standard_derivatives': 'enable',
     // }
@@ -52,5 +52,3 @@ const NoiseMaterial = shaderMaterial(
     // }
   }
 );
-
-extend({ NoiseMaterial });

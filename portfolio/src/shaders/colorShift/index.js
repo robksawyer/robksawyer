@@ -5,7 +5,9 @@
  * Usage:
  *
  *    import { extend } from 'react-three-fiber
- *    import { colorShiftMaterial } from './shaders/colorShiftMaterial'
+ *    import { ColorShiftMaterial } from './shaders/colorShift'
+ *
+ *    extend({ ColorShiftMaterial })
  *
  *    ... later in the React component
  *    <mesh>
@@ -34,7 +36,6 @@ export const ColorShiftMaterial = shaderMaterial(
   // fragment shader
   fragment,
   (material) => {
-    console.log("material", material);
     material.side = THREE.DoubleSide;
     // material.flatShading = true
     // material.wrapS = material.wrapT = THREE.MirroredRepeatWrapping

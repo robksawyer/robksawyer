@@ -6,6 +6,7 @@ varying vec2 vScreenSpace;
 varying vec3 vViewDirection;
 uniform vec2 pixels;
 float PI = 3.141592653589793238;
+
 void main() {
   vUv = uv;
   vPosition = position;
